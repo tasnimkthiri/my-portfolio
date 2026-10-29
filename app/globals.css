@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@theme {
+  --font-display: Bricolage Grotesque, sans-serif; --font-sans: Figtree, sans-serif;
+  --color-paper: #F7F4FF; --color-ink: #2B2547; --color-soft: #5B5578; --color-lav: #E4DBFF;
+  --color-peach: #FFE3D6; --color-mint: #D9F2E6; --color-butter: #FFF2C4; --color-sky: #DCEEFF;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--color-paper); color: var(--color-ink); font-family: Figtree, sans-serif; }
+h1, h2, h3 { font-family: Bricolage Grotesque, sans-serif; letter-spacing: -0.02em; }
+input, textarea, select { background: #F7F4FF; border-radius: 1rem; padding: .85rem 1rem; width: 100%; color: #2B2547; }
+.btn { background: #2B2547; color: #fff; padding: .85rem 1.6rem; border-radius: 999px; font-weight: 600; display: inline-block; cursor: pointer; transition: transform .2s; }
+.btn:hover { transform: translateY(-2px); }
+.btn:disabled { opacity: .6; }
+:focus-visible { outline: 3px solid #2B2547; outline-offset: 3px; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+.marquee { animation: marquee 40s linear infinite; width: max-content; }
+.marquee:hover { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) { .marquee { animation: none; } html { scroll-behavior: auto; } }
